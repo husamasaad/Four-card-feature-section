@@ -1,0 +1,135 @@
+/* Colors -start */
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+/* Colors -end */
+
+/* Global rules -start */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+
+
+/* Global rules -end */
+
+/* THe Section -start */
+
+main {
+    min-height: 100vh;
+    width: 100vw;
+    padding: 30px 10%;
+    text-align: center;
+    background-color: var(--Very-Light-Gray);
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--Grayish-Blue);
+    max-width: 400px;
+    margin: 0 auto;
+}
+@media (max-width: 767px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+}
+
+strong {
+    display: block;
+    font-weight: 600;
+    color: var(--Very-Dark-Blue);
+}
+
+main > p {
+    margin: 30px auto 0;
+    color: var(--Grayish-Blue);
+    font-weight: 200;
+    font-size: 15px;
+    line-height: 1.5;
+    max-width: 450px;
+}
+
+section {
+    margin-top: 60px;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    place-items: center;
+}
+@media (max-width: 1200px) {
+    section {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+.card {
+    background-color: white;
+    padding: 30px;
+    max-width: 350px;
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.card p {
+    margin: 30px 0;
+    color: var(--Grayish-Blue);
+    font-weight: 200;
+}
+
+img {
+    align-self: flex-end;
+}
+
+.a {
+    border-top-color: var(--Cyan);
+}
+.b {
+    border-top-color: var(--Red);
+}
+.c {
+    border-top-color: var(--Orange);
+}
+.d {
+    border-top-color: var(--Blue);
+}
+
+@media (min-width: 991px) {
+    .c {
+        grid-column: 2 / 2;
+    }
+
+    .d {
+        transform: translateY(-50%);
+    }
+
+    .a {
+        transform: translateY(50%);
+    }
+}
+
+/* The Section -end */
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    }
